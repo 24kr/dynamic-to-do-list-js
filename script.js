@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const li = document.createElement('li');
         li.textContent = taskText;
         const removeBtn = document.createElement('span');
-        removeBtn.textContent = '❌';
+        removeBtn.textContent = 'Remove';
         removeBtn.classList.add('remove-btn');
         li.appendChild(removeBtn);
         taskList.appendChild(li);
@@ -43,4 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             addTask();
         }
     });
+
+    // Invoke addTask to ensure it runs on DOMContentLoaded
+    addTask();
 });
