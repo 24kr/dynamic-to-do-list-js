@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Event listener for the Enter key press to add task
-    taskInput.addEventListener('keypress', (e) => {
+    taskInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
             addTask();
