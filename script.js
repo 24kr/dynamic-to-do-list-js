@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const li = document.createElement('li');
         li.textContent = taskText;
         const removeBtn = document.createElement('span');
-        removeBtn.textContent = 'Remove';
+        removeBtn.textContent = '❌';
         removeBtn.classList.add('remove-btn');
         li.appendChild(removeBtn);
         taskList.appendChild(li);
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addTask();
     });
 
-    // Optional: Add event listener for the Enter key press to add task
+    // Event listener for the Enter key press to add task
     taskInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -44,6 +44,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Invoke addTask to ensure it runs on DOMContentLoaded
-    addTask();
+    // Optional: Initial tasks fetching logic or other initialization can go here
 });
